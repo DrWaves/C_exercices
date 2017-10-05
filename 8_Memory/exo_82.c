@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <assert.h>
 
 int compare (void const *a , void const *b){
 int const *pa = (int*)a;
@@ -18,8 +19,12 @@ int main(int argc, char  *argv[]) {
   int opt;
   printf(" How many number do you want to sort ?\n" );
   scanf("%d",&num );
-  int *allocation=(int*)malloc(sizeof(int)*num);
 
+  int *allocation=(int*)malloc(sizeof(int)*num);
+  if(allocation==NULL){
+    printf("OUT OF MEMORY\n" );
+    assert(0);
+  }
   for (int i = 0; i < num; i++) {
     printf(" Print number %d :\n",i);
     scanf("%d",&allocation[i] );
