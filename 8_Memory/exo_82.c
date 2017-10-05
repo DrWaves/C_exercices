@@ -4,14 +4,14 @@
 #include <assert.h>
 
 int compare (void const *a , void const *b){
-int const *pa = (int*)a;
-int const *pb = (int*)b;
+  int const *pa = (int*)a;
+  int const *pb = (int*)b;
  return *pa-*pb;
 };
 
 int reversecompare (void const *a , void const *b){
-int const *pa = (int*)a;
-int const *pb = (int*)b;
+  int const *pa = (int*)a;
+  int const *pb = (int*)b;
  return *pb-*pa;
 };
 int main(int argc, char  *argv[]) {
