@@ -4,12 +4,9 @@
 void function (int a);
 
 int main(int argc, char const *argv[]) {
-
-  int number=atoi(argv[1]);
+  int number=strtol(argv[1],NULL,0);
   printf(" Address of the memory in main() %p \n", &number );
-function(number);
-
-
+  function(number);
   return 0;
 }
 
